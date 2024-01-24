@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    margin-left: 27%;
+    margin-right: 27%;
+}
+
+#logo {
+    width: 200px;
+    border-collapse: collapse;
+}
+
+
+#logo+p {
+    color: #107777;
+    background-color: blanchedalmond;
+    border: 2px;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+.titoloprincipale {
+    text-align: center;
+}
+
+.foto {
+    width: 450px;
+}
+figcaption{
+    text-align: center;
+}
+
+#contenitore {
+    padding: 5px;
+    border-left: 2px solid yellow;
+    
+}
+
+.featured {
+    color: red;
+    text-transform: uppercase;
+}
+
+.link {
+    text-transform: capitalize;
+}
+
+hr {
+    color: #107777;
+}
