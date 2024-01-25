@@ -1,0 +1,68 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    background-image: url("/assets/img/sfondo.png");
+    background-size: contain;
+    width: 300px;
+}
+
+
+
+/* HEADER */
+header {
+    color: white;
+    background-image: linear-gradient(#009FC5, #036D86);
+    margin: auto;
+    border-collapse: collapse;
+    height: 250px;
+}
+
+
+nav:hover {
+    color: red;
+}
+
+/* MAIN */
+main{
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px 1px grey;
+    
+}
+/* ELEMENTI NEL MAIN - ARTICLE */
+#sottotitolo {
+    color: grey;
+}
+strong{
+    color: #A02671;
+}
+/* TABELLE */
+table {
+    border-collapse: collapse;
+}
+tr:nth-child(odd) {
+    background-color: rgb(207, 206, 206);
+}
+#rigaIntestazione {
+    background-color: #3F6BCA;
+}
+caption {
+    font-weight: 400;
+}
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+aside{
+    background-color: white;
+    margin: 0 auto;
+}
+/* FOOTER */
+footer {
+    color: white;
+    background-image: linear-gradient(#313738, #055567);
+    margin: auto;
+    border-collapse: collapse;
+    font-weight: 300;
+}
