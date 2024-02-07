@@ -1,0 +1,44 @@
+body {
+    background-image: url(../images/epicode_todo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body div {
+    background-color: #f2d7fe;
+    color: #4D225F;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+hr{
+border: 3px solid #4D225F;
+border-radius: 5px;
+}
+
+#task {
+    width: 250px;
+    height: 1.5em;
+}
+
+#crea {
+    background-color: #4D225F;
+    color: white;
+    border-radius: 5px;
+    height: 2em;
+}

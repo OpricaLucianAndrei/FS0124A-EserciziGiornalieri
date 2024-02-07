@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <img src="assets/images/epicode-logo.png">
+        <h1>TO-DO LIST</h1>
+        <p>Vuoi organizzare al meglio le tue giornate? <br /> Usa questa applicazione per ordinare le tue attività!</p>
+        <br />
+        <hr />
+        <br />
+        <form id="form">
+            <label for="task"></label>
+            <input type="text" id="task" name="task" placeholder="Aggiungi task qui!" />
+            <button type="button" id="crea" onclick="aggiungiTask()">CREA</button>
+        </form>
+        <ul id="listaTask">
+
+        </ul>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
