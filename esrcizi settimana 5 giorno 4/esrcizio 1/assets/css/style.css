@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Indie Flower";
+}
+
+#lavagna {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #666666;
+    border: 10px solid #cd853f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#lavagna div{
+    width: 19%;
+    margin: 10px;
+}
+
+.postitGialli {
+    background-color: #F9FAC8;
+    background: linear-gradient(0deg, rgba(188,188,163,1) 0%, rgba(251,251,201,1) 50%);
+    box-shadow: 2px 2px 5px 0px black;
+    transform: rotate(-5deg);
+    transition: transform 0.1s linear 0s;
+}
+
+.postitVerdi {
+    background-color: #BDE5BF;
+    background: linear-gradient(0deg, rgb(145, 158, 146) 0%, rgba(199,251,202,1) 50%);
+    box-shadow: 2px 2px 5px 0px black;
+    transform: rotate(5deg);
+    transition: transform 0.1s linear 0s;
+}
+
+.postitViola {
+    background-color: #C2C3E9;
+    background: linear-gradient(0, rgba(139,140,154,1) 0%, rgba(194,195,233,1) 50%);
+    box-shadow: 2px 2px 5px 0px black;
+    transform: rotate(-8deg);
+    transition: transform 0.1s linear 0s;
+}
+
+.postitViola:hover, .postitGialli:hover, .postitVerdi:hover {
+    transform: rotate(0);
+    transform: scale(1.35, 1.35);
+}
+
