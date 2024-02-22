@@ -17,37 +17,75 @@ body {
     align-items: center;
 }
 
-#lavagna div{
+#lavagna div {
     width: 19%;
     margin: 10px;
 }
 
 .postitGialli {
     background-color: #F9FAC8;
-    background: linear-gradient(0deg, rgba(188,188,163,1) 0%, rgba(251,251,201,1) 50%);
+    background: linear-gradient(0deg, rgba(188, 188, 163, 1) 0%, rgba(251, 251, 201, 1) 50%);
     box-shadow: 2px 2px 5px 0px black;
+    animation: inizioGialli 0.2s both;
     transform: rotate(-5deg);
     transition: transform 0.1s linear 0s;
 }
 
 .postitVerdi {
     background-color: #BDE5BF;
-    background: linear-gradient(0deg, rgb(145, 158, 146) 0%, rgba(199,251,202,1) 50%);
+    background: linear-gradient(0deg, rgb(145, 158, 146) 0%, rgba(199, 251, 202, 1) 50%);
     box-shadow: 2px 2px 5px 0px black;
     transform: rotate(5deg);
     transition: transform 0.1s linear 0s;
+    animation: inizioVerdi 0.2s 0.1s both;
 }
 
 .postitViola {
     background-color: #C2C3E9;
-    background: linear-gradient(0, rgba(139,140,154,1) 0%, rgba(194,195,233,1) 50%);
+    background: linear-gradient(0, rgba(139, 140, 154, 1) 0%, rgba(194, 195, 233, 1) 50%);
     box-shadow: 2px 2px 5px 0px black;
     transform: rotate(-8deg);
     transition: transform 0.1s linear 0s;
+    animation: inizioViola 0.2s 0.05s both;
 }
 
-.postitViola:hover, .postitGialli:hover, .postitVerdi:hover {
-    transform: rotate(0);
-    transform: scale(1.35, 1.35);
+.postitViola:hover,
+.postitGialli:hover,
+.postitVerdi:hover {
+    transform: rotate(0) scale(1.35, 1.35) !important;
 }
 
+@keyframes inizioGialli {
+    from {
+        transform: translateY(-500px) rotate(-540deg) scale(1);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) rotate(-5deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes inizioViola {
+    from {
+        transform: translateX(500px) rotate(540deg) scale(1);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) rotate(-8deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes inizioVerdi{
+    from {
+              transform: translateY(500px) rotate(540deg) scale(1);
+      opacity: 0;
+    }
+    to {
+              transform: translateY(0) rotate(5deg) scale(1);
+      opacity: 1;
+    }
+  }
