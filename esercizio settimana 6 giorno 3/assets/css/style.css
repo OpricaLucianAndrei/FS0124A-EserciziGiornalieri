@@ -1,0 +1,144 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav {
+  background-color: #640fc5 !important;
+}
+
+#navbarNavAltMarkup a {
+  color: #f4f4f4;
+}
+#navbarNavAltMarkup a:hover {
+  color: red;
+}
+
+#sectionHero {
+  margin-bottom: 200px;
+  position: relative;
+  padding: 75px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #640fc5;
+  color: #f4f4f4;
+}
+
+#contenitoreTesto {
+  width: 40%;
+  margin: 0 0 100px 0;
+}
+
+#sectionHero h1 {
+  color: #28064F !important;
+  font-size: 5rem;
+  font-weight: bold;
+  animation: entrataTesto 0.5s both;
+}
+
+#sectionHero p {
+  animation: entrataTesto 0.5s 0.1s both;
+}
+
+#btnApprofondisci,
+#btnAccedi,
+#btnContattaci {
+  text-align: center;
+  width: 25%;
+  height: 40px;
+  color: #f4f4f4;
+  animation: entrataTesto 0.5s 0.2s both;
+}
+#btnApprofondisci#btnApprofondisci:active, #btnApprofondisci#btnAccedi:active, #btnApprofondisci#btnContattaci:active,
+#btnAccedi#btnApprofondisci:active,
+#btnAccedi#btnAccedi:active,
+#btnAccedi#btnContattaci:active,
+#btnContattaci#btnApprofondisci:active,
+#btnContattaci#btnAccedi:active,
+#btnContattaci#btnContattaci:active {
+  width: 23%;
+  height: 35px;
+}
+
+#btnApprofondisci {
+  background-color: #0e6cff;
+}
+
+#btnAccedi {
+  background-color: #ff8700;
+}
+
+#btnContattaci {
+  background-color: #4caf50;
+}
+
+#sectionHero img {
+  max-width: 100%;
+  border-radius: 25px;
+  box-shadow: 5px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 45%;
+  right: 15%;
+  animation: entrataImmagine 0.5s both;
+}
+
+@media screen and (max-width: 992px) {
+  #sectionHero img {
+    width: 80%;
+    right: 10%;
+  }
+  #contenitoreTesto {
+    margin: 80px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #sectionHero img {
+    width: 40%;
+  }
+  #contenitoreTesto {
+    margin: 60px 0;
+  }
+}
+#sectionArticoli {
+  margin: 75px 0;
+}
+
+#sectionArticoli div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+#sectionArticoli div article {
+  width: 23%;
+}
+
+#sectionArticoli div article img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+@keyframes entrataTesto {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes entrataImmagine {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

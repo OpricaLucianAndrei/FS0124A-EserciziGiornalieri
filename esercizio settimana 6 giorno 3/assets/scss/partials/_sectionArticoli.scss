@@ -1,0 +1,18 @@
+#sectionArticoli {
+    margin: 75px 0;
+}
+
+#sectionArticoli div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#sectionArticoli div article {
+    width: 23%;
+}
+
+#sectionArticoli div article img {
+    width: 100%;
+    border-radius: 30px;
+}

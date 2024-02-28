@@ -1,0 +1,7 @@
+@import '../partials/colors';
+
+@mixin textBig {
+    color: $testoTitolo !important;
+    font-size: 5rem;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+@import 'colors';
+
+#nav {
+    background-color: $bgHero !important;
+}
+#navbarNavAltMarkup a {
+    color: $testo;
+    &:hover {
+        color: $linkHover;
+    }
+}
