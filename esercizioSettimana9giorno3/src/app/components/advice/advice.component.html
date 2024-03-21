@@ -3,7 +3,7 @@
         <h5>Potrebbero piacerti:</h5>
         <ul class="list-group">
             <li class="list-group-item" *ngFor="let post of advised">
-                <a href="#">🔗 {{ post.title }}</a>
+                <a  [routerLink]="['/post-detail', post.id]" [routerLinkActive]="['active']">🔗 {{ post.title }}</a>
                 <br />
                 <span
                     class="badge bg-primary me-1 text-uppercase"
@@ -17,10 +17,10 @@
         <h5>Vedi anche:</h5>
         <ul class="list-group">
             <li class="list-group-item">
-                <a href="#">Post attivi</a>
+                <a [routerLink]="['/active-posts']" [routerLinkActive]="['active']">Post attivi</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Post inattivi</a>
+                <a [routerLink]="['/inactive-posts']" [routerLinkActive]="['active']">Post inattivi</a>
             </li>
         </ul>
     </div>

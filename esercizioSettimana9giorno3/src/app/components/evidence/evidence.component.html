@@ -1,4 +1,5 @@
-<div class="container-fluid px-4 py-5 bg-body-secondary">
-    <h1 class="display-5 fw-bold py-4">In evidenza: {{post.title}}</h1>
-    <a href="#">Leggi di più...</a>
+<div class="container-fluid px-4 py-5 bg-body-secondary rounded-3">
+    <h1 class="display-5 fw-bold py-4 m-0">{{post.title}}</h1>
+    <p class="mb-auto">{{ post.body.slice(0, 110) }}...</p>
+    <a [routerLink]="['/post-detail', post.id]" [routerLinkActive]="['active']">Leggi di più...</a>
 </div>

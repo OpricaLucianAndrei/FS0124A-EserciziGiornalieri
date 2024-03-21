@@ -19,9 +19,12 @@ export class RelatedComponent {
         const response = await fetch('../../assets/db.json');
         const data = await response.json();
         this.posts = data;
+        console.log(data);
+        
         if (data) {
             this.relatedPosts();
         }
+        
     }
 
     relatedPosts() {
