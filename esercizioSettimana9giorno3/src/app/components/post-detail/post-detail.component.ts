@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/models/post';
+
 @Component({
   selector: 'app-post-detail',
   templateUrl: './post-detail.component.html',
@@ -11,6 +12,7 @@ import { Post } from 'src/app/models/post';
 export class PostDetailComponent implements OnInit {
   postId!: string;
   post!: Post;
+  
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
@@ -25,6 +27,7 @@ export class PostDetailComponent implements OnInit {
       })
       .catch(error => console.error('Errore nel caricamento dei dati:', error));
   }
+  
 
 
 }

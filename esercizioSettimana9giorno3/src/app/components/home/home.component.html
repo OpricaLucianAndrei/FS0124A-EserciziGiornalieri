@@ -14,4 +14,14 @@
             <app-advice></app-advice>
         </div>
     </div>
+    <div class="row mt-5">
+        <app-single-post *ngFor="let post of posts" [post]="post">
+            <div class="d-flex flex-column">
+                <input type="text" [(ngModel)]="post.title" class="card-title form-control" id="inputTitolo">
+                <textarea name="testPost" id="testPost" cols="30" rows="10" class="card-text form-control" [(ngModel)]="post.body"></textarea>
+                <button class="btn btn-success mt-2" (click)="editPost()">Save</button>
+            </div>
+        </app-single-post>
+
+    </div>
 </div>

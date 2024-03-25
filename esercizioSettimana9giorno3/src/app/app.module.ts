@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from "@angular/router";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,6 +13,7 @@ import { AdviseComponent } from './components/advice/advice.component';
 import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -32,11 +34,13 @@ const routes: Route[] = [
     AdviseComponent,
     ActivePostsComponent,
     InactivePostsComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
