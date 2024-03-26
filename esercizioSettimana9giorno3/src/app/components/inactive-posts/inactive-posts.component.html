@@ -4,7 +4,7 @@
             <div class="card col-4 mt-4" *ngIf="!post.active">
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="badge bg-primary me-1 text-uppercase card-text" *ngFor="let tag of post.tags">{{ tag }}</p>
+                    <p class="badge bg-primary me-1 card-text" *ngFor="let tag of post.tags">{{ tag | uppercase }}</p>
                     <p class="card-text">{{ post.body }}</p>
                     <p class="card-text">{{ post.reactions }} 👍</p>
                 </div>

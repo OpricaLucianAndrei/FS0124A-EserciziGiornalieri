@@ -15,6 +15,18 @@
         </div>
     </div>
     <div class="row mt-5">
+        <div class="d-flex align-content-center mt-3">
+            <h2 class="me-2">Filter by:</h2>
+            <ul class="list-unstyled d-flex">
+              <li *ngFor="let tag of tags" class="mx-2" [ngClass]="{'selected': tag === selectedTag}">
+                <button class="btn btn-outline-primary" (click)="filterByTag(tag)">{{tag}}</button>
+              </li>
+              <li>
+                <button class="btn btn-outline-danger ms-2" (click)="resetFilter()">Delete Filter</button>
+              </li>
+            </ul>
+            
+          </div>
         <app-single-post *ngFor="let post of posts" [post]="post">
             <div class="d-flex flex-column">
                 <input type="text" [(ngModel)]="post.title" class="card-title form-control" id="inputTitolo">

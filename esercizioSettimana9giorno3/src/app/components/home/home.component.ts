@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Post } from 'src/app/models/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +9,15 @@ import { Post } from 'src/app/models/post';
 })
 export class HomeComponent {
   post!: Post;
-  posts!: Post[];
+  posts: Post[] = [];
+  tags: string[] = [];
+  selectedTag!: string | null;
+
   @Input() edit: boolean = true;
-  constructor() {
-      this.evidencePost();
+  constructor(private postService: PostService) {
   }
 
-    async evidencePost() {
-        const response = await fetch('../../assets/db.json');
-        const data = await response.json();
-        this.posts = data;
-        let index = Math.floor(Math.random() * this.posts.length);
-        this.post = this.posts[index];
-    }
-
+   
    editPost(): void {
     let title = document.getElementById('inputTitolo')! as HTMLInputElement;
     let content = (<HTMLInputElement>document.getElementById('testPost')).value!;
@@ -30,4 +26,24 @@ export class HomeComponent {
     this.edit = false;
     }
 
+    async ngOnInit(): Promise<void> {
+      const posts = await this.postService.getPosts();
+      this.posts = posts;
+      console.log(this.posts);
+      
+      let index = Math.floor(Math.random() * this.posts.length);
+      this.post = this.posts[index];
+      this.tags = this.postService.getAllTags();
+      console.log(this.tags); 
+  }
+
+  filterByTag(tag: string): void {
+    this.posts = this.postService.filterPostsByTag(tag);
+    this.selectedTag = tag;
+  }
+  
+  resetFilter(): void {
+    this.posts = this.postService.getPosts();
+    this.selectedTag = null;
+  }
 }
