@@ -1,0 +1,54 @@
+#filmTopMain {
+    height: 80vh;
+    background-image: linear-gradient(to right, #181818 10%, rgba(255, 255, 255, 0) 100%),
+        url("https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeyKckp2fVF0YHcFUfj7cqcSwYvfWwByXVtEd9FZ2rQrLida-8tEyraw_J_kolikUzvukP8c4LeGNkxwELjAApP6uJRaUR8EVFKl.jpg?r=006");
+    background-size: cover;
+}
+
+#titoloFilmTopMain {
+    width: 75%;
+}
+
+#carouselBar{
+    background-color: black;
+    position: sticky;
+    top: 81px;
+    left: 0;
+    z-index: 10000;
+}
+
+#carouselBar, .carouselMain {
+    padding: 25px;
+}
+
+.films {
+    /* */
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .films {
+        width: 14%;
+    }
+}
+
+.films img {
+    max-width: 100%;
+}
+
+#genres {
+    height: 40px !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+    text-align: center;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #e50914;
+}

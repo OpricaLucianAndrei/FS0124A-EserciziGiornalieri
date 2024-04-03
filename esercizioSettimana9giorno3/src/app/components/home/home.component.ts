@@ -17,31 +17,31 @@ export class HomeComponent {
   constructor(private postService: PostService) {
   }
 
-   
-   editPost(): void {
+
+  editPost(): void {
     let title = document.getElementById('inputTitolo')! as HTMLInputElement;
     let content = (<HTMLInputElement>document.getElementById('testPost')).value!;
     this.post.title = title.value;
     this.post.body = content;
     this.edit = false;
-    }
+  }
 
-    async ngOnInit(): Promise<void> {
-      const posts = await this.postService.getPosts();
-      this.posts = posts;
-      console.log(this.posts);
-      
-      let index = Math.floor(Math.random() * this.posts.length);
-      this.post = this.posts[index];
-      this.tags = this.postService.getAllTags();
-      console.log(this.tags); 
+  async ngOnInit(): Promise<void> {
+    const posts = await this.postService.getPosts();
+    this.posts = posts;
+    console.log(this.posts);
+
+    let index = Math.floor(Math.random() * this.posts.length);
+    this.post = this.posts[index];
+    this.tags = this.postService.getAllTags();
+    console.log(this.tags);
   }
 
   filterByTag(tag: string): void {
     this.posts = this.postService.filterPostsByTag(tag);
     this.selectedTag = tag;
   }
-  
+
   resetFilter(): void {
     this.posts = this.postService.getPosts();
     this.selectedTag = null;

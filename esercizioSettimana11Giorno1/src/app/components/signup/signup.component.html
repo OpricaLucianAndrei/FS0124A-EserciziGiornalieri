@@ -1,0 +1,108 @@
+<div class="container text-center m-2">
+    <h1>Registrati</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="userForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" class="form-control" formControlName="name" />
+            <span *ngIf="
+                                getFormC('name')?.invalid &&
+                                getFormC('name')?.touched
+                            ">
+              <ng-container *ngIf="getErrorsC('name', 'required')"><strong class="text-danger">Campo nome
+                  obbligatorio</strong></ng-container>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="surname">Cognome</label>
+            <input type="text" id="surname" class="form-control" formControlName="surname" />
+            <span *ngIf="
+                                getFormC('surname')?.invalid &&
+                                getFormC('surname')?.touched
+                            ">
+              <ng-container *ngIf="
+                                    getErrorsC('surname', 'required')
+                                "><strong class="text-danger">Campo cognome obbligatorio</strong></ng-container>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" formControlName="username" />
+            <span *ngIf="
+                                getFormC('username')?.invalid &&
+                                getFormC('username')?.touched
+                            ">
+              <ng-container *ngIf="
+                                    getErrorsC('username', 'required')
+                                "><strong class="text-danger">Campo username obbligatorio</strong></ng-container>
+  
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email" />
+            <span *ngIf="
+                                getFormC('email')?.invalid &&
+                                getFormC('email')?.touched
+                            ">
+              <ng-container *ngIf="getErrorsC('email', 'required')"><strong class="text-danger">Campo email
+                  obbligatorio</strong>
+              </ng-container>
+              <ng-container *ngIf="getErrorsC('email', 'email')"><strong class="text-danger">Email non valida</strong>
+              </ng-container>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" formControlName="password" />
+            <span *ngIf="
+                                getFormC('password')?.invalid &&
+                                getFormC('password')?.touched
+                            ">
+              <ng-container *ngIf="getErrorsC('password', 'required')"><strong class="text-danger">Campo password
+                  obbligatorio</strong></ng-container>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Conferma Password</label>
+            <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword" />
+            <span *ngIf="
+                                getFormC('confirmPassword')?.invalid &&
+                                getFormC('confirmPassword')?.touched
+                            ">
+              <ng-container *ngIf="
+                                    getErrorsC('confirmPassword', 'required')
+                                "><strong class="text-danger">Campo conferma password
+                  obbligatorio</strong></ng-container>
+             
+              <ng-container *ngIf="getErrorsC('confirmPassword', 'passwordMismatch')" class="alert alert-danger">
+                <strong class="text-danger">Le password non corrispondono</strong>
+              </ng-container>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="profileImage">Immagine Profilo</label>
+            <input type="file" id="profileImage" class="form-control" formControlName="profileImage" />
+          </div>
+          <div class="form-group">
+            <label for="biography">Biography</label>
+            <textarea id="biography" class="form-control" formControlName="biography"></textarea>
+          </div>
+          <div class="mt-3">
+            <p>Select Your Gender</p>
+            <select formControlName="gender" class="w-25">
+              <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
+            </select>
+          </div>
+  
+  
+          <button type="submit" (click)="submit()" class="btn btn-primary mt-4" [disabled]="userForm.invalid">
+            Invia
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

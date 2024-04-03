@@ -1,0 +1,20 @@
+<div class="container-fluid p-5">
+    <h1 class="text-white text-center">Login</h1>
+    <div class="d-flex justify-content-center">
+        <form #loginForm="ngForm" (submit)="onSubmit(loginForm)" class="bg-black p-5 rounded-3">
+        <label for="username" class="form-label text-white">Username</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            required
+            [(ngModel)]="username"
+        />
+        <label for="password" class="form-label text-white">Password</label>
+        <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" />
+        <button type="submit" class="btn btn-danger mt-4 mx-auto">Invia</button>
+    </form>
+    </div>
+   
+</div>

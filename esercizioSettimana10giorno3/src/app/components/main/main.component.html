@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-4 d-flex justify-content-evenly" *ngFor="let product of products, let i = index">
+        <div class="card my-3 w-100">
+            <div class="card-img-top">
+                <img src="{{ product.thumbnail }}" alt="immagine {{ product.title }}">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">{{ product.title }}</h3>
+                <p class="card-text">{{ product.description.slice(0,50) }}...</p>
+            </div>
+            <div class="card-footer p-4 d-flex justify-content-between">
+                <button type="button" class="btn btn-primary" (click)="addToCart(product)">{{ product.price }}€</button>
+                <button type="button" class="btn btnFavorite btnLike ms-3" (click)="addToFavs(product)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
